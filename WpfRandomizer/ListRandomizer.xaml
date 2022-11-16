@@ -1,0 +1,55 @@
+﻿<Window x:Class="WpfRandomizer.ListRandomizer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfRandomizer"
+        mc:Ignorable="d"
+        Title="ListRandomizer" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Border Background="#393E46" />
+        <Border Grid.Row="0" Grid.Column="1" Background="#393E46" />
+        <Border Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Background="#393E46" />
+        
+        <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock TextAlignment="Center" FontSize="18" Foreground="Honeydew" FontFamily="Roboto">Input</TextBlock>
+            <RichTextBox
+                Name="InputBox"
+                Background="#F2E7D5" 
+                VerticalScrollBarVisibility="Visible" 
+                MaxHeight="250"
+                MinHeight="250"
+            ></RichTextBox>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock TextAlignment="Center" FontSize="18" Foreground="Honeydew" FontFamily="Roboto">Result</TextBlock>
+            <RichTextBox 
+                Name="OutputBox"
+                Background="#F2E7D5" 
+                VerticalScrollBarVisibility="Visible" 
+                MaxHeight="250"
+                MinHeight="250"
+            ></RichTextBox>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Orientation="Horizontal"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="BtnRandomize" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Margin="0,0,90,5" Click="BtnRandomize_OnClick">Randomize</Button>
+            <Button x:Name="BtnReset" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Margin="0,0,90,5" Click="BtnReset_OnClick">Reset</Button>
+            <Button x:Name="BtnSaveDoc" Style="{StaticResource ButtonStyle}" Template="{StaticResource ButtonTemplate}" Margin="0 0 0 5" Click="BtnSaveDoc_OnClick">Save as doc</Button>
+        </StackPanel>
+        <Button Grid.Row="0" Grid.Column="1" x:Name="BtnSettings" Style="{StaticResource SettingsButtonStyle}" Template="{StaticResource SettingsButtonTemplate}" Click="BtnSettings_OnClick">
+            <Image Source="pack://application:,,,/Assets/settings-icon.png" Width="40" Height="40"/>
+        </Button>
+    </Grid>
+</Window>   

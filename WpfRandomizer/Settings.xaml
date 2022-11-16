@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfRandomizer.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WpfRandomizer"
+        mc:Ignorable="d"
+        Title="Settings" Height="200" Width="250" ResizeMode="NoResize">
+    <Window.Resources>
+        <ControlTemplate x:Key="SaveButtonTemplate" TargetType="Button">
+            <Grid>
+                <Rectangle x:Name="BtnSave" Fill="{TemplateBinding Background}" Stroke="{TemplateBinding Foreground}"></Rectangle>
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+                <!-- <Border> -->
+                <!--     <ContentPresenter Margin="{TemplateBinding Padding}"/> -->
+                <!-- </Border> -->
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Cursor" Value="Hand"></Setter>
+                    <Setter Property="Fill" TargetName="BtnSave" Value="#577a6b"></Setter>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <Style x:Key="SaveButtonStyle" TargetType="Button">
+            <Setter Property="Padding" Value="5"></Setter>
+            <Setter Property="Cursor" Value="Hand"></Setter>
+            <Setter Property="Background" Value="#6D9886"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="FontSize" Value="16"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#393E46">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 10">
+                <TextBlock Margin="0 10 0 0" FontSize="14" Foreground="Honeydew">
+                    Separation options: 
+                </TextBlock>
+                <RadioButton Name="EnterRadio" GroupName="Separations" Checked="Option_OnChecked" FontSize="10"  Foreground="Honeydew" FontWeight="Bold" VerticalContentAlignment="Center">New line</RadioButton>
+                <RadioButton Name="CommaRadio" GroupName="Separations" Checked="Option_OnChecked"  FontSize="10" Foreground="Honeydew" FontWeight="Bold" VerticalContentAlignment="Center">Comma</RadioButton>
+                <RadioButton Name="NumberRadio" GroupName="Separations" Checked="Option_OnChecked"  FontSize="10" Foreground="Honeydew" FontWeight="Bold" VerticalContentAlignment="Center">Number</RadioButton>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <CheckBox Name="NumberedCheckBox" FontSize="14" Foreground="Honeydew">Numbered output</CheckBox>
+                <Button x:Name="BtnSave" Style="{StaticResource SaveButtonStyle}" Template="{StaticResource SaveButtonTemplate}" Margin="0 10 0 10" Click="BtnSave_OnClick">Save</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
