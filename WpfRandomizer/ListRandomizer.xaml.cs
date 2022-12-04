@@ -60,7 +60,10 @@ namespace WpfRandomizer
                     list = input.Split(',', StringSplitOptions.RemoveEmptyEntries).ToList();
                     break;
                 case OptionModel.SeparationOptions.NumberedList:
-                    list = input.Split(')', StringSplitOptions.RemoveEmptyEntries).ToList();
+                    var inputAsList = input.Split('\n').ToList();
+                    list = inputAsList.Where(
+                        s => !String.IsNullOrWhiteSpace(s) && !String.IsNullOrEmpty(s)).Select(
+                        s => s.Split(')')[1]).ToList();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
