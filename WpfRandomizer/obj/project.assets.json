@@ -2206,11 +2206,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jalil\\RiderProjects\\ListRandomizer\\WpfRandomizer\\WpfRandomizer.csproj",
+      "projectUniqueName": "C:\\Users\\Jalil\\Desktop\\Programming\\Works\\Dotnet\\ListRandomizer\\WpfRandomizer\\WpfRandomizer.csproj",
       "projectName": "WpfRandomizer",
-      "projectPath": "C:\\Users\\Jalil\\RiderProjects\\ListRandomizer\\WpfRandomizer\\WpfRandomizer.csproj",
+      "projectPath": "C:\\Users\\Jalil\\Desktop\\Programming\\Works\\Dotnet\\ListRandomizer\\WpfRandomizer\\WpfRandomizer.csproj",
       "packagesPath": "C:\\Users\\Jalil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jalil\\RiderProjects\\ListRandomizer\\WpfRandomizer\\obj\\",
+      "outputPath": "C:\\Users\\Jalil\\Desktop\\Programming\\Works\\Dotnet\\ListRandomizer\\WpfRandomizer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jalil\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -2265,7 +2265,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Jalil\\.dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Jalil\\.dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

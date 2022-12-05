@@ -8,6 +8,7 @@ using System.Windows.Documents;
 using System.Windows.Media.Imaging;
 using WpfRandomizer.Extensions;
 using WpfRandomizer.Models;
+using WpfRandomizer.Services;
 
 namespace WpfRandomizer
 {
@@ -20,7 +21,14 @@ namespace WpfRandomizer
         {
             get
             {
-                using (var reader = new StreamReader(Path.Combine(Environment.CurrentDirectory,"Config","randomizeOptions.json")))
+                var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                if (!File.Exists(Path.Combine(documents, "RandomizerConfig", "randomizeOptions.json")))
+                {
+                    Directory.CreateDirectory(Path.Combine(documents, "RandomizerConfig"));
+                    FileService.CreateConfig(Path.Combine(documents, "RandomizerConfig","randomizeOptions.json"));
+                }
+                    
+                using (var reader = new StreamReader(Path.Combine(documents ,"RandomizerConfig","randomizeOptions.json")))
                 {
                     string json = reader.ReadToEnd();
                     var deserialized = JsonSerializer.Deserialize<OptionModel>(json);

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "meH5goAJ8i1H7+opoDVfSWP/mFQuoUIv+pc34RJ5aEmiiad6coPRWJAPVL7tyrQtNTMvvOigSLedgFmGSeXQsw==",
+  "dgSpecHash": "s4nL2mLw8s+5fEuR6pmd5ciqITjXUhmQDHiYUPA+8Fd5/46YlLn2fNpAgGTxw2M7UBoHI5H0LbakAFglU5b9rA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jalil\\RiderProjects\\ListRandomizer\\WpfRandomizer\\WpfRandomizer.csproj",
+  "projectFilePath": "C:\\Users\\Jalil\\Desktop\\Programming\\Works\\Dotnet\\ListRandomizer\\WpfRandomizer\\WpfRandomizer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jalil\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Jalil\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using WpfRandomizer.Models;
+using WpfRandomizer.Services;
 
 namespace WpfRandomizer;
 
@@ -49,7 +50,12 @@ public partial class Settings : Window
         var json = JsonSerializer.Serialize(model);
         try
         {
-            File.WriteAllText(Path.Combine(Environment.CurrentDirectory,"Config","randomizeOptions.json"), json);
+            var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            if (!File.Exists(Path.Combine(documents,"RandomizerConfig","randomizeOptions.json")))
+            {
+                Directory.CreateDirectory(Path.Combine(documents, "RandomizerConfig"));
+            }
+            FileService.CreateConfig(Path.Combine(documents,"RandomizerConfig","randomizeOptions.json"),json);
         }
         catch (Exception exception)
         {
